@@ -30,6 +30,14 @@
                     int c=Convert.ToInt32(Console.ReadLine());
                     obj3.findRoots(a, b, c);
                     break;
+                case 4:
+                    NumberToString obj4= new NumberToString();
+                    Console.WriteLine("Enter number :");
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("The equivalent string is:");
+                    obj4.checkFactors(num);
+                    break;
+
 
 
             }
