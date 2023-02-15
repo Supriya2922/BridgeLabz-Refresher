@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more informatio
-namespace Project10_DivisibleBy7;
+namespace Program10_DivisibleBy7;
 class Program
 {
     static void Main(string[] args)
