@@ -20,6 +20,17 @@
                     Console.WriteLine("Numbers from 1-100 without using loop :");
                     obj2.print(1);
                     break;
+                case 3:
+                    QuadraticEqn obj3= new QuadraticEqn();
+                    Console.WriteLine("Enter value of a :");
+                    int a=Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter value of b:");
+                    int b=Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter value of c:");
+                    int c=Convert.ToInt32(Console.ReadLine());
+                    obj3.findRoots(a, b, c);
+                    break;
+
 
             }
         }
