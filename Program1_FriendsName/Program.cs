@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more 
 using System;
 
-namespace Program1
+namespace Program1_FriendsName
 {
     internal class Program
     {

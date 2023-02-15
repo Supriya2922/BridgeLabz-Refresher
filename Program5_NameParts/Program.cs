@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Program5;
+namespace Program5_NameParts;
 class Program
 {
     static void Main(string[] args)

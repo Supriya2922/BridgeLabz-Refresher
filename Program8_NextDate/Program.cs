@@ -1,4 +1,4 @@
-﻿namespace MyProject;
+﻿namespace Program8_NextDate;
 class Program
 {
     static void Main(string[] args)

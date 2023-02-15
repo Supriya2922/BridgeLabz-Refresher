@@ -1,4 +1,4 @@
-﻿namespace Program4;
+﻿namespace Program4_StringToDecimal;
 class Program
 {
     static void Main(string[] args)

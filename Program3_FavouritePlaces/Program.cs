@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-namespace MyProject;
+namespace Program3_FavouritePlaces;
 class Program
 {
     static void Main(string[] args)

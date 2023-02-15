@@ -1,4 +1,4 @@
-﻿namespace MyProject;
+﻿namespace Program7_Circle;
 class Program
 {
     static void Main(string[] args)
