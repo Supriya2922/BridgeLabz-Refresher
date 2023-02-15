@@ -17,6 +17,7 @@
                     break;
                 case 2:
                     PrintTill100 obj2= new PrintTill100();
+                    Console.WriteLine("Numbers from 1-100 without using loop :");
                     obj2.print(1);
                     break;
 
