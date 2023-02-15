@@ -37,6 +37,17 @@
                     Console.WriteLine("The equivalent string is:");
                     obj4.checkFactors(num);
                     break;
+                 case 5:
+                    CheckLetters obj5= new CheckLetters();
+                    Console.WriteLine("Enter the string :");
+                    String str= Console.ReadLine();
+                    obj5.Check(str);
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+
+
 
 
 
