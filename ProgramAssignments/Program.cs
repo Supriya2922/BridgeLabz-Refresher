@@ -79,16 +79,7 @@ namespace ProgramAssignments
                         ValidOperation obj10= new ValidOperation();
                         Console.WriteLine("Enter the expression:");
                         String exp=Console.ReadLine();
-                        if (obj10.checkValidity(exp))
-                        {
-                            Console.WriteLine("Valid expression");
-                            int res=obj10.evaluate(exp);
-                            Console.WriteLine(res);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Invalid");
-                        }
+                        obj10.checkValidity(exp);
                         break;
 
                     case 11:
