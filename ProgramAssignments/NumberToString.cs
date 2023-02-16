@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignments
+namespace ProgramAssignments
 {
     public class NumberToString
     {
@@ -17,7 +17,7 @@ namespace Assignments
                 s += "Plang";
             if (n % 7 == 0)
                 s += "Plong";
-            if(n%3!=0 && n%5!=0 && n%7!=0)
+            if (n % 3 != 0 && n % 5 != 0 && n % 7 != 0)
                 s += n;
             Console.WriteLine(s);
         }

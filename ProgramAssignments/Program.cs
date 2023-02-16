@@ -1,30 +1,26 @@
-﻿using Day2_5Progs;
-
-namespace Assignments
+﻿
+namespace ProgramAssignments
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            for (; ; )
+            for(; ; )
             {
                 Console.WriteLine("\n\nSelect an option:");
-                Console.WriteLine("1.Factorial of a number");
-                Console.WriteLine("2.Print 1 - 100 witout using loop");
+                Console.WriteLine("1.Factorial of a number ");
+                Console.WriteLine("2.Print 1-100 witout using loop");
                 Console.WriteLine("3.Find roots of Quadratic equation");
-                Console.WriteLine("4.Number to String based on factors");
-                Console.WriteLine("5.Check presence of a, e, p");
-                Console.WriteLine("6.Average of numbers(float array)");
-                Console.WriteLine("7.Find Prime number");
-                Console.WriteLine("8.Shift all zeros to end of the array");
-                Console.WriteLine("9.Find the First repeated element in the array");
+                Console.WriteLine("4.Number to String");
+                Console.WriteLine("5.Check presence of a,e,p");
+                Console.WriteLine("6.Find average of float numbers");
+                Console.WriteLine("7.Find Prime numbers");
+                Console.WriteLine("8.Shift zeros to the end of array");
+                Console.WriteLine("9.Find first repeated element in an array");
                 Console.WriteLine("10.Valid arithmetic expression");
-                Console.WriteLine("11.Length of Longest substring without repeating characters");
+                Console.WriteLine("11.Length of longest substring");
                 Console.WriteLine("12.Exit");
-                Console.WriteLine("Enter your choice:");
-
                 int ch = Convert.ToInt32(Console.ReadLine());
-            
                 switch (ch)
                 {
                     case 1:
@@ -63,15 +59,22 @@ namespace Assignments
                         obj5.Check(str);
                         break;
                     case 6:
-                        Average obj6=new Average();
+                            Average obj6= new Average();
                         obj6.findAverage();
                         break;
                     case 7:
-                        PrimeNumber obj7= new PrimeNumber();
+                            PrimeNumber obj7= new PrimeNumber();
                         obj7.findPrime();
                         break;
+                    case 8:
+                        ShiftZeros obj8=new ShiftZeros();
+                        obj8.ShiftZerosFunc();
+                        break;
+                    
 
-                    case 11:
+
+
+                    case 12:
                         Environment.Exit(0);
                         break;
                     default:

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day2_5Progs
+namespace ProgramAssignments
 {
     public class PrimeNumber
     {
@@ -25,11 +25,11 @@ namespace Day2_5Progs
             int n = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the elements:");
             int[] arr = new int[n];
-            
+
             for (int i = 0; i < n; i++)
             {
                 arr[i] = Convert.ToInt32(Console.ReadLine());
-                
+
             }
             Console.WriteLine("Prime numbers are :");
             for (int i = 0; i < n; i++)
@@ -41,4 +41,4 @@ namespace Day2_5Progs
             }
         }
     }
-}
+    }

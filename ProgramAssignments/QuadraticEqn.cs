@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignments
+namespace ProgramAssignments
 {
     public class QuadraticEqn
     {
-        public void findRoots(int a,int b,int c)
+        public void findRoots(int a, int b, int c)
         {
             double root1, root2;
             double discriminant = b * b - 4 * a * c;
@@ -16,7 +16,7 @@ namespace Assignments
             {
                 Console.WriteLine("It has two complex roots");
             }
-            else if(discriminant == 0)
+            else if (discriminant == 0)
             {
                 root1 = -b / (2.0 * a);
                 root2 = root1;
@@ -27,8 +27,8 @@ namespace Assignments
             }
             else
             {
-                root1=(-b+Math.Sqrt(discriminant))/(2.0*a);
-                root2 = (-b -Math.Sqrt(discriminant)) / (2.0 * a);
+                root1 = (-b + Math.Sqrt(discriminant)) / (2.0 * a);
+                root2 = (-b - Math.Sqrt(discriminant)) / (2.0 * a);
                 Console.WriteLine("Both roots are real and unequal!");
                 Console.WriteLine("Root 1:" + root1);
                 Console.WriteLine("Root 2:" + root2);
