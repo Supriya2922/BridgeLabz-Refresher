@@ -70,9 +70,33 @@ namespace ProgramAssignments
                         ShiftZeros obj8=new ShiftZeros();
                         obj8.ShiftZerosFunc();
                         break;
-                    
+                    case 9:
+                        RepeatedElement obj9= new RepeatedElement();
+                        obj9.FirstRepeatElement();
+                        break;
 
+                    case 10:
+                        ValidOperation obj10= new ValidOperation();
+                        Console.WriteLine("Enter the expression:");
+                        String exp=Console.ReadLine();
+                        if (obj10.checkValidity(exp))
+                        {
+                            Console.WriteLine("Valid expression");
+                            int res=obj10.evaluate(exp);
+                            Console.WriteLine(res);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid");
+                        }
+                        break;
 
+                    case 11:
+                        LongestSubstring obj11=new LongestSubstring();
+                        Console.WriteLine("Enter the string:");
+                        String word = Console.ReadLine();
+                        obj11.findSubstring(word);
+                        break;
 
                     case 12:
                         Environment.Exit(0);
