@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day2_5Progs
+namespace Assignments
 {
     public class CheckLetters
     {
