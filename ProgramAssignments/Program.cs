@@ -96,6 +96,10 @@ namespace ProgramAssignments
                         DeleteItem obj12= new DeleteItem();
                         obj12.deleteElem();
                         break;
+                    case 13:
+                        SecondLargestElement obj13= new SecondLargestElement();
+                        obj13.findSecondLargest();
+                        break;
 
                     case 16:
                         Environment.Exit(0);
