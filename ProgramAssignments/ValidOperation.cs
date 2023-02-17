@@ -12,7 +12,7 @@ namespace ProgramAssignments
     {
         public void checkValidity(String str)
         {
-            Regex pattern = new Regex(@"([0-9][\+,-,/,\*]{1}[0-9]$)+");
+            Regex pattern = new Regex(@"([0-9]{1,}[\+,-,/,\*]{1}[0-9]{1,}$)+");
             
             Match match= pattern.Match(str);
             if(match.Success)

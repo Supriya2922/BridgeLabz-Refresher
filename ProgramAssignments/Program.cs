@@ -19,7 +19,11 @@ namespace ProgramAssignments
                 Console.WriteLine("9.Find first repeated element in an array");
                 Console.WriteLine("10.Valid arithmetic expression");
                 Console.WriteLine("11.Length of longest substring");
-                Console.WriteLine("12.Exit");
+                Console.WriteLine("12.Delete Element at the desired position in an array");
+                Console.WriteLine("13.Second largest element in an array");
+                Console.WriteLine("14.Remove duplicates from an array");
+                Console.WriteLine("15.Smallest gap between the numbers of an array");
+                Console.WriteLine("16.Exit");
                 int ch = Convert.ToInt32(Console.ReadLine());
                 switch (ch)
                 {
@@ -88,8 +92,12 @@ namespace ProgramAssignments
                         String word = Console.ReadLine();
                         obj11.findSubstring(word);
                         break;
-
                     case 12:
+                        DeleteItem obj12= new DeleteItem();
+                        obj12.deleteElem();
+                        break;
+
+                    case 16:
                         Environment.Exit(0);
                         break;
                     default:
