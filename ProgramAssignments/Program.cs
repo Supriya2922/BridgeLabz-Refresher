@@ -100,6 +100,10 @@ namespace ProgramAssignments
                         SecondLargestElement obj13= new SecondLargestElement();
                         obj13.findSecondLargest();
                         break;
+                    case 14:
+                        RemoveDuplicates obj14= new RemoveDuplicates();
+                        obj14.remove();
+                        break;
 
                     case 16:
                         Environment.Exit(0);
