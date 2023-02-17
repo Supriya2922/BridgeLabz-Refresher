@@ -104,6 +104,10 @@ namespace ProgramAssignments
                         RemoveDuplicates obj14= new RemoveDuplicates();
                         obj14.remove();
                         break;
+                    case 15:
+                        SmallestGap obj15= new SmallestGap();
+                        obj15.findGap();
+                        break;
 
                     case 16:
                         Environment.Exit(0);
