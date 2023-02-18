@@ -142,6 +142,10 @@ namespace ProgramAssignments
                         QuotientRemainder obj21= new QuotientRemainder();
                         obj21.findQuotientReminder();
                         break;
+                    case 22:
+                        Swap obj22=new Swap();
+                        obj22.swap();
+                        break;
                     case 26:
                         Environment.Exit(0);
                         break;
