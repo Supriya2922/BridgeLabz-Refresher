@@ -23,7 +23,8 @@ namespace ProgramAssignments
                 Console.WriteLine("13.Second largest element in an array");
                 Console.WriteLine("14.Remove duplicates from an array");
                 Console.WriteLine("15.Smallest gap between the numbers of an array");
-                Console.WriteLine("16.Exit");
+                Console.WriteLine("16.Flip Coin-Heads and Tails percentage");
+                Console.WriteLine("26.Exit");
                 int ch = Convert.ToInt32(Console.ReadLine());
                 switch (ch)
                 {
@@ -108,8 +109,14 @@ namespace ProgramAssignments
                         SmallestGap obj15= new SmallestGap();
                         obj15.findGap();
                         break;
+                        case 16:
+                            FlipCoin    obj16= new FlipCoin();
+                        obj16.percentageHeadsTails();
+                        break;
+                    case 17:
+                        break;
 
-                    case 16:
+                    case 26:
                         Environment.Exit(0);
                         break;
                     default:
