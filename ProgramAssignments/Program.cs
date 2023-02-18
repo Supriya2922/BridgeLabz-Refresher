@@ -27,6 +27,7 @@ namespace ProgramAssignments
                 Console.WriteLine("17.Check leap year");
                 Console.WriteLine("18.Power of 2");
                 Console.WriteLine("19.Harmonic number");
+                Console.WriteLine("20.Prime factors of n");
                 Console.WriteLine("26.Exit");
                 int ch = Convert.ToInt32(Console.ReadLine());
                 switch (ch)
@@ -127,6 +128,10 @@ namespace ProgramAssignments
                     case 19:
                         HarmonicNumber obj19= new HarmonicNumber();
                         obj19.printHarmonicSum();
+                        break;
+                    case 20:
+                        PrimeFactors obj20=new PrimeFactors();
+                        obj20.primeFactors();
                         break;
                     case 26:
                         Environment.Exit(0);
