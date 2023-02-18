@@ -146,6 +146,10 @@ namespace ProgramAssignments
                         Swap obj22=new Swap();
                         obj22.swap();
                         break;
+                    case 23:
+                        OddEven obj23= new OddEven();
+                        obj23.findOddEven();
+                        break;
                     case 26:
                         Environment.Exit(0);
                         break;
