@@ -26,6 +26,7 @@ namespace ProgramAssignments
                 Console.WriteLine("16.Flip Coin-Heads and Tails percentage");
                 Console.WriteLine("17.Check leap year");
                 Console.WriteLine("18.Power of 2");
+                Console.WriteLine("19.Harmonic number");
                 Console.WriteLine("26.Exit");
                 int ch = Convert.ToInt32(Console.ReadLine());
                 switch (ch)
@@ -123,7 +124,10 @@ namespace ProgramAssignments
                         PowerOf2 obj18= new PowerOf2();
                         obj18.printPower();
                         break;
-
+                    case 19:
+                        HarmonicNumber obj19= new HarmonicNumber();
+                        obj19.printHarmonicSum();
+                        break;
                     case 26:
                         Environment.Exit(0);
                         break;
