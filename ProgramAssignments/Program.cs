@@ -28,6 +28,11 @@ namespace ProgramAssignments
                 Console.WriteLine("18.Power of 2");
                 Console.WriteLine("19.Harmonic number");
                 Console.WriteLine("20.Prime factors of n");
+                Console.WriteLine("21.Find quotient and remainder");
+                Console.WriteLine("22.Swap two nummbers");
+                Console.WriteLine("23.Check if number is even or odd");
+                Console.WriteLine("24.Check if alphabet is vowel or constant");
+                Console.WriteLine("24.Largest among 3 numbers");
                 Console.WriteLine("26.Exit");
                 int ch = Convert.ToInt32(Console.ReadLine());
                 switch (ch)
@@ -132,6 +137,10 @@ namespace ProgramAssignments
                     case 20:
                         PrimeFactors obj20=new PrimeFactors();
                         obj20.primeFactors();
+                        break;
+                    case 21:
+                        QuotientRemainder obj21= new QuotientRemainder();
+                        obj21.findQuotientReminder();
                         break;
                     case 26:
                         Environment.Exit(0);
