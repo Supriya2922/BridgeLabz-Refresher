@@ -25,6 +25,7 @@ namespace ProgramAssignments
                 Console.WriteLine("15.Smallest gap between the numbers of an array");
                 Console.WriteLine("16.Flip Coin-Heads and Tails percentage");
                 Console.WriteLine("17.Check leap year");
+                Console.WriteLine("18.Power of 2");
                 Console.WriteLine("26.Exit");
                 int ch = Convert.ToInt32(Console.ReadLine());
                 switch (ch)
@@ -117,6 +118,10 @@ namespace ProgramAssignments
                     case 17:
                         LeapYear obj17= new LeapYear(); 
                         obj17.checkLeapYear();
+                        break;
+                    case 18:
+                        PowerOf2 obj18= new PowerOf2();
+                        obj18.printPower();
                         break;
 
                     case 26:
