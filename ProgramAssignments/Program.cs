@@ -32,7 +32,7 @@ namespace ProgramAssignments
                 Console.WriteLine("22.Swap two nummbers");
                 Console.WriteLine("23.Check if number is even or odd");
                 Console.WriteLine("24.Check if alphabet is vowel or constant");
-                Console.WriteLine("24.Largest among 3 numbers");
+                Console.WriteLine("25.Largest among 3 numbers");
                 Console.WriteLine("26.Exit");
                 int ch = Convert.ToInt32(Console.ReadLine());
                 switch (ch)
@@ -149,6 +149,14 @@ namespace ProgramAssignments
                     case 23:
                         OddEven obj23= new OddEven();
                         obj23.findOddEven();
+                        break;
+                    case 24:
+                        VowelOrConstant obj24= new VowelOrConstant();
+                        obj24.findVowelOrConstant();
+                        break;
+                    case 25:
+                        LargestNumber obj25= new LargestNumber();
+                        obj25.findLargest();
                         break;
                     case 26:
                         Environment.Exit(0);
