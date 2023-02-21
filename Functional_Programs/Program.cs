@@ -29,22 +29,29 @@
                             {
                               
                                 int[,] arr = IOLibrary.readInt2DArray();
+                                Console.WriteLine("The array is:");
                                 IOLibrary.printInt2DArray(arr);
                             }
                             else if (ch == 2)
                             {
                                 bool[,] arr = IOLibrary.readBoolean2DArray();
+                                Console.WriteLine("The array is:");
                                 IOLibrary.printBoolean2DArray(arr);
                             }
                             else if (ch == 3)
                             {
                                 double[,] arr = IOLibrary.readDouble2DArray();
+                                Console.WriteLine("The array is:");
                                 IOLibrary.printDouble2DArray(arr);
                             }
                             else if (ch == 4)
                                 break;
                         }
                         break;
+                    case 2:
+                        TargetSumZero.targetSumZero();
+                        break;
+                        
                 }
 
             }
