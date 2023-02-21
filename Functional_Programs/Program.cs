@@ -51,7 +51,10 @@
                     case 2:
                         TargetSumZero.targetSumZero();
                         break;
-                        
+                    case 3:
+                        EucledianDistance.findEucledianDistance();
+                        break;
+
                 }
 
             }
