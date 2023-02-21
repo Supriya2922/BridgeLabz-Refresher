@@ -13,18 +13,18 @@ namespace Logical_Programs
         {
             DateTime start = DateTime.Now;
             starttime = start.Second;
-            Console.WriteLine("Start time(ms):" +starttime );
+            Console.WriteLine("Start time(in seconds):" + starttime );
         }
         public static void stop()
         {
             DateTime stop = DateTime.Now;
             stoptime = stop.Second;
-            Console.WriteLine("Stop time(ms):" + stoptime);
+            Console.WriteLine("Stop time(in seconds):" + stoptime);
         }
         public static void timespan()
         {
             elapsedtime = stoptime - starttime;
-            Console.WriteLine("Elapsed time(ms):" + elapsedtime);
+            Console.WriteLine("Elapsed time(in seconds):" + elapsedtime);
 
         }
     }

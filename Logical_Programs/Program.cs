@@ -6,7 +6,7 @@
         {
             for(; ; )
             {
-                Console.WriteLine("Select an option:");
+                Console.WriteLine("\nSelect an option:");
                 Console.WriteLine("1.Gambler Program");
                 Console.WriteLine("2.Coupon numbers");
                 Console.WriteLine("3.Simulate Stopwatch Program");
@@ -33,6 +33,9 @@
                             StopWatch.stop();
                         }
                         StopWatch.timespan();
+                        break;
+                        case 4:
+                        TicTacToe.ticTacToe();
                         break;
                 }
             }
