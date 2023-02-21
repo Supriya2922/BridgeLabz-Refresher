@@ -12,6 +12,7 @@
                 Console.WriteLine("2.Sum of three Integer adds to ZERO");
                 Console.WriteLine("3.Euclidean distance from the point (x, y) to the origin (0, 0).");
                 Console.WriteLine("4.Calculate Wind Chill");
+                Console.WriteLine("5.Exit");
                 Console.WriteLine("Enter your choice:");
                 int choice=Convert.ToInt32(Console.ReadLine());
                 switch(choice) {
@@ -53,6 +54,12 @@
                         break;
                     case 3:
                         EucledianDistance.findEucledianDistance();
+                        break;
+                    case 4:
+                        WindChill.findWindChill();
+                        break;
+                        case 5:
+                        Environment.Exit(0);
                         break;
 
                 }
