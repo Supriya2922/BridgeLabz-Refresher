@@ -36,6 +36,9 @@
                         Console.WriteLine("Read operation");
                         JSONFile.read();
                         break;
+                    case 4:
+                        Environment.Exit(0);
+                        break;
                 }
             }
         }
