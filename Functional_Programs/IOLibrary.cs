@@ -50,7 +50,7 @@ namespace Functional_Programs
             Console.WriteLine("Enter column length");
             int c = Convert.ToInt32(Console.ReadLine());
             bool[,] arr = new bool[r, c];
-            Console.WriteLine("Enter the numbers");
+            Console.WriteLine("Enter the values");
             for (int i = 0; i < r; i++)
             {
                 for (int j = 0; j < c; j++)
