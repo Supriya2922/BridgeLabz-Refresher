@@ -19,6 +19,9 @@
                     case 1:
                         Gambler.gamblerfunc();
                         break;
+                    case 2:
+                        CouponNumber.coupon();
+                        break;
                     case 3:
                         Console.WriteLine("Select 0 to start time");
                         int op1=Convert.ToInt32(Console.ReadLine());
@@ -36,6 +39,9 @@
                         break;
                         case 4:
                         TicTacToe.ticTacToe();
+                        break;
+                    case 5:
+                        Environment.Exit(0);
                         break;
                 }
             }
