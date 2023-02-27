@@ -10,17 +10,17 @@ namespace Additional_Programs
     {
         public static void sort()
         {
-            Console.WriteLine("Enter the length of the array");
+            /*Console.WriteLine("Enter the length of the array");
             int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the elements:");
-            int[] arr = new int[n];
-            for (int i = 0; i < n; i++)
+            Console.WriteLine("Enter the elements:");*/
+            String[] arr = new String[] {"Hello","I","am","good"};
+            /*for (int i = 0; i < n; i++)
             {
                 Console.Write("Enter element {0} :", i + 1);
                 arr[i] = Convert.ToInt32(Console.ReadLine());
 
-            }
-            var sortlist = InsertionSort(arr);
+            }*/
+            var sortlist = InsertionSort((IComparable[]) arr);
             Console.WriteLine("Insertion Sort:");
             foreach (var item in sortlist)
             {
@@ -35,14 +35,14 @@ namespace Additional_Programs
             {
                 for (int j = i - 1; j > -1; j--)
                 {
-                    int cur = j + 1;
-                    T currentItem = sortedList[cur];
-                    T previousItem = sortedList[j];
-                    var comparison = previousItem.CompareTo(currentItem);
+                    int curindex = j + 1;
+                    T cur = sortedList[curindex];
+                    T prev = sortedList[j];
+                    var comparison = prev.CompareTo(cur);
                     if (comparison > 0)
                     {
-                        sortedList[j] = currentItem;
-                        sortedList[cur] = previousItem;
+                        sortedList[j] = cur;
+                        sortedList[curindex] = prev;
                     }
                     else
                     {
@@ -54,12 +54,6 @@ namespace Additional_Programs
             return sortedList;
         }
 
-        private static void PrintList<T>(IEnumerable<T> list)
-        {
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
-        }
+       
     }
 }

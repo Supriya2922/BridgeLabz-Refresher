@@ -10,6 +10,8 @@
                 Console.WriteLine("1.Swap nibbles");
                 Console.WriteLine("2.Customize Message Demonstration using String Function and RegEx");
                 Console.WriteLine("3.Insertion sort algorithm using generics");
+                Console.WriteLine("4.Exit");
+
                 Console.WriteLine("Enter your choice:");
                 int ch=Convert.ToInt32(Console.ReadLine());
                 switch (ch)
@@ -22,7 +24,9 @@
                         break;
                     case 3:
                         Sorting.sort(); break;
-
+                    case 4:
+                        Environment.Exit(0);
+                        break;
                 }
             }
         }

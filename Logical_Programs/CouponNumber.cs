@@ -13,6 +13,7 @@ namespace Logical_Programs
             Console.WriteLine("Enter the number of coupons");
             int n = Convert.ToInt32(Console.ReadLine());
             char[] ch = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".ToCharArray();
+            Console.WriteLine("The coupons generated are:");
             for (int i = 0; i < n; i++)
             {
                 Random random = new Random();

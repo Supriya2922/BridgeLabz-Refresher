@@ -14,6 +14,7 @@ namespace IOFileOperations
         public static void read()
         {
             string file = @"D:\BridgeRefresher\BridgeLabz-Refresher\IOFileOperations\employee.txt";
+        
             Console.WriteLine("Contents of file are:");
             if (File.Exists(file))
             {

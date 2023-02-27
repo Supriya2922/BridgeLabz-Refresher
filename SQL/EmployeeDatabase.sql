@@ -173,3 +173,14 @@ select @EmpId = Insrt.ID, @EmpName = Insrt.Name, @EmpGender = Insrt.Gender from 
 insert into LogTable(EmpId, EmpName, EmpGender, TriggerAction, ActionTime)  
 values(@EmpId, @EmpName, @EmpGender, 'Record inserted', GETDATE());  
 print 'Trigger fired - After Insert'  
+
+CREATE PROCEDURE spAddEmployee
+@fName nvarchar(50),
+@lName nvarchar(50),
+@gender nvarchar(50),
+@Age int,
+@Email nvarchar(50)
+as
+begin
+insert into EmployeeTable(fName,lName,Gender,Age,Email) values(@fname,@lName,@gender,@Age,@Email)
+end
