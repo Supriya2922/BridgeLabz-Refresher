@@ -26,9 +26,10 @@ namespace AdoNetApp
                 SqlConnection sqlConnection = new SqlConnection(connString);
                 //Command object
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = System.Data.CommandType.Text;
+               
                 cmd.Connection = sqlConnection;
-
+                var logger=NLog.LogManager.GetCurrentClassLogger();
+                logger.Info("App started");
                 switch (ch)
                 {
                     case 1:
@@ -43,16 +44,34 @@ namespace AdoNetApp
                         Console.WriteLine("Enter email");
                         String mail=Console.ReadLine();
                         sqlConnection.Open();
-                        cmd.CommandText = "insert into EmployeeTable(fName,lName,Gender,Age,Email) values(@fname,@lname,@gender,@age,@email)";
-                        cmd.Parameters.AddWithValue("@fname", fname);
-                        cmd.Parameters.AddWithValue("@lname", lname);
-                        cmd.Parameters.AddWithValue("@gender", gender);
-                        cmd.Parameters.AddWithValue("@age", age);
-                        cmd.Parameters.AddWithValue("@email", mail);
-                        int rows = cmd.ExecuteNonQuery();
-                        sqlConnection.Close();
+                        logger.Info("Database connection established");
+                        cmd.CommandType=CommandType.StoredProcedure; 
+                        cmd.CommandText= "spAddEmployee";
+                      
+                        cmd.Parameters.Add(new SqlParameter("@fname", fname));
+                        cmd.Parameters.Add(new SqlParameter("@lname", lname));
+                        cmd.Parameters.Add(new SqlParameter("@gender", gender));
+                        cmd.Parameters.Add(new SqlParameter("@age", age));
+                        cmd.Parameters.Add(new SqlParameter("@email", mail));
 
-                        Console.WriteLine("{0} row inserted", rows);
+                        try
+                        {
+
+                            int rows = cmd.ExecuteNonQuery();
+                            logger.Info("{Rows} row inserted",rows);
+                            Console.WriteLine("{0} row inserted", rows);
+                        }
+                        catch (Exception e)
+                        {
+                            logger.Error(e, "Query not executed");
+                        }
+                        finally
+                        {
+                            sqlConnection.Close();
+                            NLog.LogManager.Shutdown();
+                        }
+                       
+
                         break;
                     case 2:
                         Console.WriteLine("Enter the id of the Employee:");
@@ -69,30 +88,66 @@ namespace AdoNetApp
                         String newmail = Console.ReadLine();
 
                         sqlConnection.Open();
-                        cmd.CommandText = "update EmployeeTable set fName=@fname,lName=@lname,Gender=@gender,Age=@age,Email=@email where EmpID=@id";
-                        cmd.Parameters.AddWithValue("@id", id);
-                        cmd.Parameters.AddWithValue("@fname", newfname);
-                        cmd.Parameters.AddWithValue("@lname", newlname);
-                        cmd.Parameters.AddWithValue("@gender", newgender);
-                        cmd.Parameters.AddWithValue("@age", newage);
-                        cmd.Parameters.AddWithValue("@email", newmail);
-                        int row = cmd.ExecuteNonQuery();
-                        sqlConnection.Close();
+                        logger.Info("Database connection established");
+                        cmd.CommandType = CommandType.StoredProcedure; cmd.CommandText = "spUpdateEmployee";
 
-                        Console.WriteLine("{0} row updated", row);
+                        
+                        cmd.Parameters.Add(new SqlParameter("@id", id));
+                        cmd.Parameters.Add(new SqlParameter("@fname", newfname));
+                        cmd.Parameters.Add(new SqlParameter("@lname", newlname));
+                        cmd.Parameters.Add(new SqlParameter("@gender", newgender));
+                        cmd.Parameters.Add(new SqlParameter("@age", newage));
+                        cmd.Parameters.Add(new SqlParameter("@email", newmail));
+                        try
+                        {
+                            int row = cmd.ExecuteNonQuery();
+                            logger.Info("{Rows} row(s) updated", row);
+                            Console.WriteLine("{0} row updated", row);
+                        }
+                        catch(Exception ex)
+                        {
+                            logger.Error(ex, "Query not executed");
+                        }
+                        finally
+                        {
+                            NLog.LogManager.Shutdown();
+                            sqlConnection.Close();
+                        }
+                       
+
+                       
+                        Console.WriteLine("Enter the EmpId to be deleted");
                         break;
                         case 3:
-                        Console.WriteLine("Enter the EmpId to be deleted");
+                        Console.WriteLine("Enter employee id to be deleted");
                         int eid=Convert.ToInt32(Console.ReadLine());    
                         sqlConnection.Open();
-                        cmd.CommandText = "delete from EmployeeTable where EmpID=@id";
-                        cmd.Parameters.AddWithValue("@id", eid);
-                        int r = cmd.ExecuteNonQuery();
-                        sqlConnection.Close();
-                        if (r > 0)
+                        logger.Info("Database connection established");
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "spDeleteEmployee";
+                        
+                        cmd.Parameters.Add(new SqlParameter("@id", eid));
+                        
+                        try
+                        {
+                            int r = cmd.ExecuteNonQuery();
+                            logger.Info("{Rows} row(s) deleted", r);
                             Console.WriteLine("{0} row deleted successfully", r);
-                        else
-                            Console.WriteLine("Deletion unsuccessful");
+
+                        }
+                        catch(Exception ex)
+                        {
+                            Console.WriteLine("Query not executed");
+
+                        }
+                        finally
+                        {
+                            sqlConnection.Close();
+                            NLog.LogManager.Shutdown();
+
+                        }
+                        
+                        
                         break;
                     case 4:
                         cmd.CommandText = "select * from EmployeeTable";
