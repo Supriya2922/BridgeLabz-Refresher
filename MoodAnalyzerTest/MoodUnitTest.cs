@@ -3,7 +3,7 @@ using MoodAnalyzerProgram;
 namespace MoodAnalyzerTest
 {
     [TestClass]
-    public class UnitTest1
+    public class MoodTest
     {
         [TestMethod]
         public void TestHappy()
