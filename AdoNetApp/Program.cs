@@ -10,7 +10,10 @@ namespace AdoNetApp
     internal class Program
     {
         static void Main(string[] args)
-        {for (; ; )
+        {
+            var logger = NLog.LogManager.GetCurrentClassLogger();
+            logger.Info("Application started");
+            for (; ; )
             {
                 Console.WriteLine("Select an option:");
                 Console.WriteLine("1.Insert");
@@ -28,8 +31,7 @@ namespace AdoNetApp
                 SqlCommand cmd = new SqlCommand();
                
                 cmd.Connection = sqlConnection;
-                var logger=NLog.LogManager.GetCurrentClassLogger();
-                logger.Info("App started");
+               
                 switch (ch)
                 {
                     case 1:
@@ -68,7 +70,7 @@ namespace AdoNetApp
                         finally
                         {
                             sqlConnection.Close();
-                            NLog.LogManager.Shutdown();
+                           
                         }
                        
 
@@ -137,20 +139,19 @@ namespace AdoNetApp
                         }
                         catch(Exception ex)
                         {
-                            Console.WriteLine("Query not executed");
+                            logger.Error(ex, "Query not executed");
 
                         }
                         finally
                         {
                             sqlConnection.Close();
-                            NLog.LogManager.Shutdown();
-
                         }
                         
                         
                         break;
                     case 4:
-                        cmd.CommandText = "select * from EmployeeTable";
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "spReadRecords";
                         DataTable tb= new DataTable();
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         da.Fill(tb);
@@ -164,6 +165,9 @@ namespace AdoNetApp
                         }
                         break;
                     case 5:
+
+                        logger.Info("Application closed");
+                        NLog.LogManager.Shutdown();
                         Environment.Exit(0);
                         break;
 
